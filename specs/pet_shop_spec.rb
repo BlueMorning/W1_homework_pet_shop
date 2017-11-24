@@ -218,6 +218,7 @@ class TestPetShop < Minitest::Test
     assert_equal(1, pets_sold(@pet_shop))
     assert_equal(1900, total_cash(@pet_shop))
     assert_equal(100, customer[:cash])
+    assert_equal(nil, find_pet_by_name(@pet_shop, pet[:name]))
   end
 
 end
