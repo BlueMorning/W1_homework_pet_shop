@@ -90,5 +90,4 @@ def sell_pet_to_customer(pet_shop, pet, customer)
     increase_pets_sold(pet_shop, 1)
     add_or_remove_cash(pet_shop, pet[:price])
   end
-
 end
