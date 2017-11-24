@@ -37,7 +37,7 @@ def pets_by_breed(pet_shop, breed_to_select)
   return breed_found
 end
 
-#Return the pet whose name matches with the given pet_name otherwise return nil
+#Return the pet whoÒse name matches with the given pet_name otherwise return nil
 def find_pet_by_name(pet_shop, pet_name)
 
   pet_found_by_name = nil
@@ -48,6 +48,6 @@ def find_pet_by_name(pet_shop, pet_name)
       break
     end
   end
-  
+
   return pet_found_by_name
 end
