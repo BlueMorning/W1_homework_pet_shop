@@ -178,6 +178,11 @@ class TestPetShop < Minitest::Test
     assert_equal(1, customer_pet_count(customer))
     assert_equal(1, pets_sold(@pet_shop))
     assert_equal(1900, total_cash(@pet_shop))
+
+    #Further tests to make sure the customer has paid and the pet has been removed from the store
+    assert_equal(100, customer[:cash])
+    assert_nil(nil, find_pet_by_name(@pet_shop, pet[:name]))
+
   end
 
   def test_sell_pet_to_customer__pet_not_found
@@ -189,6 +194,10 @@ class TestPetShop < Minitest::Test
     assert_equal(0, customer_pet_count(customer))
     assert_equal(0, pets_sold(@pet_shop))
     assert_equal(1000, total_cash(@pet_shop))
+
+    #Further tests to make sure the customer has NOT paid
+    assert_equal(1000, customer[:cash])
+
   end
 
   def test_sell_pet_to_customer__insufficient_funds
@@ -206,19 +215,6 @@ class TestPetShop < Minitest::Test
     customer = @customers[0]
     decrease_customer_cash(customer, 999)
     assert_equal(1, customer[:cash])
-  end
-
-  def test_sell_pet_to_customer_pet_found_and_cash_transaction
-    customer = @customers[0]
-    pet = find_pet_by_name(@pet_shop,"Arthur")
-
-    sell_pet_to_customer(@pet_shop, pet, customer)
-
-    assert_equal(1, customer_pet_count(customer))
-    assert_equal(1, pets_sold(@pet_shop))
-    assert_equal(1900, total_cash(@pet_shop))
-    assert_equal(100, customer[:cash])
-    assert_equal(nil, find_pet_by_name(@pet_shop, pet[:name]))
   end
 
 end
