@@ -61,3 +61,8 @@ def remove_pet_by_name(pet_shop, pet_name_to_remove)
     end
   end
 end
+
+#Add a new pet to the pet shop
+def add_pet_to_stock(pet_shop, new_pet)
+  pet_shop[:pets].push(new_pet)
+end
