@@ -91,3 +91,7 @@ def sell_pet_to_customer(pet_shop, pet, customer)
     add_or_remove_cash(pet_shop, pet[:price])
   end
 end
+
+def decrease_customer_cash(customer, pet_price)
+  customer[:cash] -= pet_price
+end

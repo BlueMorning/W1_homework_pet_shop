@@ -204,7 +204,7 @@ class TestPetShop < Minitest::Test
 
   def test_subtract_pet_price_from_customer_cash
     customer = @customers[0]
-    decrease_customer_cash(999, customer)
+    decrease_customer_cash(customer, 999)
     assert_equal(1, customer[:cash])
   end
 
