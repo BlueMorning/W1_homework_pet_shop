@@ -12,3 +12,8 @@ end
 def add_or_remove_cash(pet_shop, cash_amount)
   pet_shop[:admin][:total_cash] += cash_amount
 end
+
+#Return the number of pets which have been sold
+def pets_sold(pet_shop)
+  return pet_shop[:admin][:pets_sold]
+end
