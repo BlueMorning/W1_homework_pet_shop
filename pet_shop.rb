@@ -86,5 +86,6 @@ end
 def sell_pet_to_customer(pet_shop, pet, customer)
 
   add_pet_to_customer(customer, pet)
+  increase_pets_sold(pet_shop, 1)
 
 end
