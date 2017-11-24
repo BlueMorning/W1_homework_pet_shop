@@ -8,7 +8,7 @@ def total_cash(pet_shop)
   return pet_shop[:admin][:total_cash]
 end
 
-#Return void. Add or remove an amount of cash from the total cash amount
+#Add or remove an amount of cash from the total cash amount
 def add_or_remove_cash(pet_shop, cash_amount)
   pet_shop[:admin][:total_cash] += cash_amount
 end
@@ -18,7 +18,7 @@ def pets_sold(pet_shop)
   return pet_shop[:admin][:pets_sold]
 end
 
-# Increase the pets sold number of the given pet_sold_number
+#Increase the pets sold number of the given pet_sold_number
 def increase_pets_sold(pet_shop, pet_sold_number)
   pet_shop[:admin][:pets_sold] += pet_sold_number
 end
